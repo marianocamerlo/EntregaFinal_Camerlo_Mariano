@@ -1,0 +1,37 @@
+nav {
+  display: flex;
+  padding: 12px 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 55px;
+  height: 8vh;
+  min-height: 55px;
+  background-color: #f1c40f;
+  border-bottom: #fff;
+  border-style: solid;
+  border-width: .1rem;
+
+}
+.navbar-brand {
+    font-weight: 500;
+    list-style: none;
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.ActiveOption {
+    font-weight: 500;
+    margin-left: 3rem;
+    list-style: none;
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.Option {
+    font-weight: 500;
+    margin-left: 3rem;
+    list-style: none;
+    text-decoration: none;
+    color: #1f1f1f;
+}

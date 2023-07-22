@@ -24,7 +24,7 @@ const products=[
       price: 135,
       img: './assets/fila-classic.png',
       stock: 3,
-      category: 'Urbana'
+      category: 'Deportiva'
     },
     {
       id: 4,
