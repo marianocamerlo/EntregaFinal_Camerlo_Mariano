@@ -1,17 +1,18 @@
-import "./ItemList.css";
+import React from "react";
 import Item from "../Item/Item";
-import "bootstrap/dist/css/bootstrap.css";
+import "./ItemList.css";
 
-const ItemList = ({ products }) => {
+function ItemList(props) {
+  const { products } = props;
   return (
-    
+    <div className="container">
       <div className="itemList">
-        {products?.map((prod) => (
-          <Item key={prod.id} {...prod} />
+        {products?.map((item) => (
+          <Item key={item.id} {...item} />
         ))}
       </div>
-    
+    </div>
   );
-};
+}
 
 export default ItemList;

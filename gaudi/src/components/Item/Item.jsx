@@ -1,27 +1,28 @@
 import "./Item.css";
 import { Link } from "react-router-dom";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
-const Item = ({ id, brand, model, price, img, stock }) => {
+function Item(props) {
+  const { id, brand, model, img, price } = props;
   return (
-    <article className="CardItem flex-container">
-      <header className="Header">
-        <h2 className="ItemBrand">{brand}</h2>
-        <h4 className="ItemModel">{model}</h4>
-      </header>
-      <picture>
-        <img className="img-fluid" src={img} alt={model} />
-      </picture>
-      <section>
-        <p className="info">Precio: ${price}</p>
-        <p className="info info-Secondary">Stock disponible: {stock}</p>
-      </section>
-      <footer className="ItemFooter">
-        <Link to={`/item/${id}`} className="CTA">
-          Ver producto
+    <div class="product-card">
+      <div class="card-header">
+        <img src={img} alt={brand + " " + model} />
+      </div>
+      <div class="card-body">
+        <h4 class="product-title">{brand}</h4>
+        <p class="product-status">{model}</p>
+        <h3 class="product-price">Precio: ${price}</h3>
+      </div>
+      <div class="card-footer">
+        <Link to={`/product/${id}`}>
+          <ButtonComponent colorText="#f0f0f0" colorBg="#202020">
+            Ver producto
+          </ButtonComponent>
         </Link>
-      </footer>
-    </article>
+      </div>
+    </div>
   );
-};
+}
 
 export default Item;

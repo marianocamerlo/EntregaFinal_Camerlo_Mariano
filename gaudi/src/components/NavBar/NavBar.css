@@ -1,37 +1,74 @@
 nav {
-  display: flex;
   padding: 12px 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 55px;
+  margin: 0 auto;
   height: 8vh;
   min-height: 55px;
-  background-color: #f1c40f;
-  border-bottom: #fff;
+  background-image: url(../../../public/assets/pattern_zebra_nav.png);
+  background-size:cover;
+  background-repeat:   no-repeat;
+  background-position: top center;
+  border-bottom: #f0f0f0;
   border-style: solid;
-  border-width: .1rem;
-
+  border-width: 0.1rem;
 }
 .navbar-brand {
-    font-weight: 500;
-    list-style: none;
-    text-decoration: none;
-    color: #1f1f1f;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background-color: #f0f0f0;
+  border-radius: 1.25rem;
+  padding: 0.25rem 1rem;
+  list-style: none;
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+.navbar-brand:hover {
+  background-color: #F0F230;
+  transition: 0.25s;
 }
 
 .ActiveOption {
-    font-weight: 500;
-    margin-left: 3rem;
-    list-style: none;
-    text-decoration: none;
-    color: #1f1f1f;
+  font-weight: 500;
+  font-size: 1.25rem;
+  background-color: #f0f0f0;
+  border-radius: 1.25rem;
+  padding: 0.25rem 1rem;
+  margin-left: 3rem;
+  list-style: none;
+  text-decoration: none;
+  color: #1f1f1f;
 }
 
 .Option {
-    font-weight: 500;
-    margin-left: 3rem;
-    list-style: none;
-    text-decoration: none;
-    color: #1f1f1f;
+  font-weight: 500;
+  font-size: 1.25rem;
+  background-color: #f0f0f0;
+  border-radius: 1.25rem;
+  padding: 0.25rem 1rem;
+  margin-left: 3rem;
+  list-style: none;
+  text-decoration: none;
+  color: #1f1f1f; 
+}
+
+.Option:hover {
+  background-color: #d9dce8;
+  transition: 0.5s;
+}
+
+.shadows {
+    -webkit-box-shadow: 3px 3px 0px 0px #c1c8e7e6;
+-moz-box-shadow: 3px 3px 0px 0px #bfc6e6e6;
+box-shadow: 3px 3px 0px 0px #bfc6e6e6;
+transition: 1s
+}
+
+.active-shadows {
+  -webkit-box-shadow: 3px 3px 0px 0px #F0F230;
+-moz-box-shadow: 3px 3px 0px 0px #F0F230;
+box-shadow: 3px 3px 0px 0px #F0F230;
+transition: 1s
 }

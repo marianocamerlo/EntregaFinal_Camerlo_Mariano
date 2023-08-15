@@ -2,6 +2,31 @@
   display: inline-block;
 }
 
-.buttons {
-    background-color: brown
+.item-count-button {
+  font-size: 1rem;
+  max-width: 160px;
+  border-radius: 4px;
+  border: none;
+  margin: 5px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-shadow: 3px 3px 0px 0px #c1c8e7e6;
+  -moz-box-shadow: 3px 3px 0px 0px #bfc6e6e6;
+  box-shadow: 3px 3px 0px 0px #bfc6e6e6;
+  transition: 0.5s;
+}
+
+.item-count-button:hover {
+  background-color: #d9dce8;
+}
+
+.count-text {
+  font-weight: 500;
+}
+
+.add-to-cart-button h4 {
+  font-size: 1rem;
+  font-weight: 500;
 }

@@ -1,33 +1,59 @@
 import "./ItemCount.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-  const [quantity, setQuantity] = useState(initial);
+function ItemCount(props) {
+  const [clickCount, setClickCount] = useState(1);
 
-  const increment = () => {
-    if (quantity < stock) {
-      setQuantity(quantity + 1);
+  function handleClickAdd() {
+    if (clickCount === props.stock) {
+    } else {
+      setClickCount(clickCount + 1);
     }
-  };
+  }
 
-  const decrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
+  function handleClickSub() {
+    if (clickCount > 1) {
+      setClickCount(clickCount - 1);
     }
-  };
+  }
 
   return (
-    <div className="container text-center">
-      <div className="row align-items-center mx-auto">
-        <button className="col btn btn-outline-danger" onClick={decrement}>
-            -
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        className="item-count-container"
+      >
+        <button
+          disabled={props.stock === 0}
+          className="item-count-button"
+          onClick={handleClickSub}
+        >
+          -
         </button>
-        <h4 className="col px-3">{quantity}</h4>
-        <button className="col btn btn-outline-primary" onClick={increment}>+
+        <h2 className="count-text">{clickCount}</h2>
+        <button
+          disabled={props.stock === 0}
+          className="item-count-button"
+          onClick={handleClickAdd}
+        >
+          +
         </button>
       </div>
+
+      <button
+        disabled={props.stock === 0}
+        onClick={() => props.onConfirm(clickCount)}
+        className="item-count-button add-to-cart-button"
+      >
+        <h4>Añadir al carrito</h4>
+      </button>
     </div>
   );
-};
+}
 
 export default ItemCount;

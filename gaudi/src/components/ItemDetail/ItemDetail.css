@@ -1,0 +1,50 @@
+.detail-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px #00000040;
+  user-select: none;
+  margin-top: 1.5rem;
+}
+
+.detail-header {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.detail-header img {
+  max-height: 250px;
+  border-radius: 0.25rem;
+}
+
+.detail-title {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #353535;
+}
+
+.detail-status {
+  color: #808080;
+}
+
+.detail-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #353535;
+  margin: 1rem 0;
+  line-height: 0.5;
+}
+
+.detail-description {
+  color: #808080;
+}
+
+.detail-footer {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s;
+}

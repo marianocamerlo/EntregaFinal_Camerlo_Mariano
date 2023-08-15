@@ -1,0 +1,18 @@
+.cart {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.cart svg {
+  height: 25px;
+}
+
+.cart span {
+    background-color: #F0F230;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    border-radius: 5rem;
+    transform: translateX(-5px);
+    font-size: medium;
+    }

@@ -1,38 +1,31 @@
 import CartWidget from "../CartWidget/CartWidget";
+
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = () => {
+export default function NavBar() {
   return (
     <nav>
-      <Link to="/" className="navbar-brand">
+      <Link to="/" className="navbar-brand shadows">
         Zebra Shoes
       </Link>
 
       <div className="column">
         <NavLink
-          to={`/category/urbanas`}
-          className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          to={"/category/Urbana"}
+          className={({ isActive }) => (isActive ? "ActiveOption active-shadows" : "Option shadows")}
         >
           Urbanas
         </NavLink>
         <NavLink
-          to={`/category/deportivas`}
-          className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+          to={"/category/Deportiva"}
+          className={({ isActive }) => (isActive ? "ActiveOption active-shadows" : "Option shadows")}
         >
           Deportivas
         </NavLink>
-        <NavLink
-          to={`/category/faq`}
-          className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
-        >
-          Preguntas Frecuentes
-        </NavLink>
       </div>
-      <CartWidget className="column" />
+      <CartWidget/>
     </nav>
   );
-};
-
-export default NavBar;
+}
